@@ -11,7 +11,8 @@ public class FinishLine : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            finishEfect.Play();
+            finishEfect.Play();           
+            GetComponent<AudioSource>().Play();
             Invoke("LoadNewScene", delayTime);
         }        
     }
